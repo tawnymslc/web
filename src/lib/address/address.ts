@@ -157,6 +157,7 @@ export const parseAddressInput: ParseAddressInput = async args => {
   if (isValidAddress) {
     const vanityAddress = await reverseLookupVanityAddress(args)
     // return a valid address, and a possibly blank or populated vanity address
+    //console.log({ address: args.value, vanityAddress } )   
     return { address: args.value, vanityAddress }
   }
   // at this point it's not a valid address, but may not be a vanity address
