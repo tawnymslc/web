@@ -16,7 +16,8 @@ let _resolution: Resolution | undefined
 const getResolution = (): Resolution => {
   const infuraApiKey = last(getConfig().REACT_APP_ETHEREUM_NODE_URL.split('/')) ?? ''
   if (!infuraApiKey) moduleLogger.error('No API key found in REACT_APP_ETHEREUM_NODE_URL')
-  const infuraProviderUrl = `https://mainnet.infura.io/v3/${infuraApiKey}`
+  //const infuraProviderUrl = `https://mainnet.infura.io/v3/${infuraApiKey}`
+  const infuraProviderUrl = getConfig().REACT_APP_ETHEREUM_NODE_URL
 
   const polygonProviderUrl = getConfig().REACT_APP_ALCHEMY_POLYGON_URL
   if (!polygonProviderUrl)
