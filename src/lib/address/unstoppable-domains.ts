@@ -67,7 +67,6 @@ export const resolveUnstoppableDomain: ResolveVanityAddress = async args => {
   }
 }
 
-// reverse lookup
 export const reverseLookupUnstoppableDomain: ReverseLookupVanityAddress = async args => {
   const { chainId, value } = args
   const ticker = chainIdToUDTicker[chainId]
